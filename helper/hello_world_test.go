@@ -2,18 +2,18 @@ package helper
 
 import "testing"
 
-func TestHelloWorld(t *testing.T)  {
+func TestHelloWorld(t *testing.T) {
 	result := HelloWorld("indonesia juara")
 
 	if result != "hello indonesia juara" {
-		panic("result is not hello indonesia juara")
+		t.Error("result must be 'hello indonesia juara' ")
 	}
 }
 
-func TestHelloWorldHafet(t *testing.T)  {
+func TestHelloWorldHafet(t *testing.T) {
 	result := HelloWorld("hafid juara")
 
 	if result != "hello hafid juara" {
-		panic("result is not hello hafid juara")
+		t.Fatal("result must be 'hello hafid juara' ")
 	}
 }
